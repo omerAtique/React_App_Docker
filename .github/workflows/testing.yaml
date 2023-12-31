@@ -40,18 +40,7 @@ jobs:
           to: omer1720902@gmail.com
           from: ibnkhalid209@gmail.com
           body: The workflow failed.
-      - name: On success
-        if: ${{ success() }}
-        uses: dawidd6/action-send-mail@v3
-        with:
-          connection_url: ${{secrets.MAIL_CONNECTION}}
-          server_address: smtp.gmail.com
-          server_port: 465
-          secure: true
-          subject: Github Actions job result
-          to: omer1720902@gmail.com
-          from: ibnkhalid209@gmail.com
-          body: The workflow is successful.  
+
       - name: rsync deployments
         if: ${{ success() }}
         uses: burnett01/rsync-deployments@5.1
