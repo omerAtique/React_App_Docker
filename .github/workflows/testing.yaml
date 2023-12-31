@@ -59,6 +59,6 @@ jobs:
           switches: -avzr --delete
           path: ./*
           remote_path: ~/
-          remote_host: 51.21.150.202
+          remote_host: 13.49.73.18
           remote_user: ubuntu
           remote_key: "${{secrets.SSH_PRIVATE_KEY}}"
